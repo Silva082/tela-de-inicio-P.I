@@ -1,0 +1,316 @@
+.libertinus-serif-regular {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libertinus-serif-semibold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.libertinus-serif-bold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libertinus-serif-regular-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.libertinus-serif-semibold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.libertinus-serif-bold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.libertinus-serif-regular {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libertinus-serif-semibold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.libertinus-serif-bold {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libertinus-serif-regular-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.libertinus-serif-semibold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.libertinus-serif-bold-italic {
+  font-family: "Libertinus Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "inter", sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+/* cabeçalho    */
+header{
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+    
+}
+body{
+    background-image:  url("Fundo.png");
+    background-color: #222222;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+/* Estilo geral do cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;  
+  padding: 10px 40px;
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Botão "Inscrever-se" */
+.btn {
+  background-color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* leve destaque ao passar o mouse */
+.btn:hover {
+  background-color: #ffffff;
+   color:  rgb(22, 22, 22);
+}
+.slider{
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px;
+  border-radius: 10px;
+}
+.slides{
+  width: 400%; /* 4 slides lado a lado */
+  height: 100%;
+  display: flex;
+ transition: margin-left 0.6s ease-in-out;
+ 
+}
+.slider input[type="radio"]{
+  position: absolute;
+  left: -9999px; /* movido pra fora da tela */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.slide{
+  width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.manual-navigation{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+.manual-btn{
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.manual-btn.active,
+#radio1:checked ~ .manual-navigation label[for="radio1"],
+#radio2:checked ~ .manual-navigation label[for="radio2"],
+#radio3:checked ~ .manual-navigation label[for="radio3"],
+#radio4:checked ~ .manual-navigation label[for="radio4"] {
+  background: #fff;
+}
+.manual-btn:not(:last-child){
+  margin-right: 12px;
+}
+.manual-btn:hover{
+  background-color: #ffffff;
+}
+#radio1:checked ~ .slides{ margin-left: 0; }
+#radio2:checked ~ .slides{ margin-left: -100%; }
+#radio3:checked ~ .slides{ margin-left: -200%; }
+#radio4:checked ~ .slides{ margin-left: -300%; }
+  .txt-container{
+    flex-direction: column;
+  }
+
+/* garante que o bloco .txt fique imediatamente abaixo do slider e centralizado */
+.txt{
+  width: 800px; /* mesmo que o slider */
+  margin: 12px auto 28px auto;
+  text-align: center;
+  
+}
+.txt-content p{ 
+  margin: 0 0 8px 0; color: #ffffff; 
+}
+.txt-content h1{
+   margin: 0; font-size: 1.1rem; color: #ffffff; 
+  }
+
+@media (max-width: 820px){
+  .txt, .slider{ width: 95%; }
+}
+/* rodapé */
+:root{
+  --color--neutral-0: #ffffff;
+   --color--neutral-10: #171717;
+    --color--neutral-30: #5f5f5f;
+     --color--neutral-40: #2e2e2e;
+
+}
+footer{
+  width: 100%;
+  color: var(--color--neutral-40);
+ 
+}
+#footer_content{
+background-color: var(--color--neutral-0);
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+#footer_contents h1{
+  margin-bottom: 0.75rem;
+}
+#footer_contents img{
+  width: 150px;
+  margin-bottom: 1rem;
+}
+#footer_social_media{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+#footer_social_media .footer-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color--neutral-40);
+  border-radius: 50%;
+  display: flex;
+}
+#footer_social_media .footer-link i{
+font-size: 1.25rem;
+}
+#footer_social_media .footer-link:hover{
+  color: var(--color--neutral-10);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+#instagram{
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+#facebook{
+  background: #4267b2;
+}
+#whatsapp{
+  background: #25d366;
+}
+.footer-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+
+}
+.footer-list a{
+  color: var(--color--neutral-30);
+  text-decoration: none;
+}
+.footer-list a:hover{
+  color: #7f37c9;
+}
+@media screen and (max-width: 768px){
+  #footer_content{
+    grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+  }
+  
+}
+@media screen and (max-width: 426px){
+  #footer_content{
+    grid-template-columns: repeat(1, 1fr);
+   padding: 3rem 1rem;
+  }
+  
+}
